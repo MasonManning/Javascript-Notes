@@ -47,6 +47,37 @@ that is created in the base/global execution context points to the window
 object. So essentially in the browser there is a window object that has a 
 variable called 'this' that points to the window object.
 
+## Hoisting
+Hoisting is performed by the parser before the code is executed. 
+During the construction of the execution context the code is parsed and memory
+for the variables and functions is allocated. Functions and variables are 
+treated differently. Functions are saved in memory in their entirety while 
+variables are initialized to undefined.
+
+2.1
+
+function foo(){
+   console.log("bar")
+}
+foo()
+
+2.2
+foo()
+function foo() {
+   console.log("bar"
+}
+
+Example 2.1 would print "bar" to the console, however if the function is
+executed before the function is declared as seen in example 2.2 then it will 
+still print "bar" to the console. This is because when the execution context is
+created the code is parsed and memory is allocated for the function foo. The
+function exists in memory even though the function definition appears after the
+function is executed. This process is called hoisting. It appears as though the
+function declaration is hoisted or lifted to the top of the file because the 
+function can be run before it is defined.
 
 
- 
+## Undefined
+
+## Not Defined 
+Error message "Uncaught ReferenceError: a is not defined"
