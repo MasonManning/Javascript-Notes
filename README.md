@@ -1,4 +1,4 @@
-Javascript Notes
+## Javascript Notes
 
 Syntax parsers convert code to computer instructions.
 It is possible to do extra things while parsing the code to something the computer can understand, such as hoisting.
@@ -62,10 +62,12 @@ function foo(){
 foo()
 
 2.2
+```javascript
 foo()
 function foo() {
    console.log("bar"
 }
+```
 
 Example 2.1 would print "bar" to the console, however if the function is
 executed before the function is declared as seen in example 2.2 then it will 
@@ -78,6 +80,43 @@ function can be run before it is defined.
 
 
 ## Undefined
+Undefined is a primitive data type in javascript. This value should never be 
+assigned manually and is reserved, only to be assigned to variables that have 
+just been declared. What is the difference between declared and defined?
+
+3.1
+var foo
+
+3.2
+var foo = 'bar'
+
+In example 3.1 the variable foo is being declared. A value has yet to be 
+assigned to the variable foo. Thus it is only declared. If a variable has been
+assigned then it would be considered to be defined. In example 3.2 the variable
+foo has been defined because the variable foo has been given the value of 
+'bar'. As mentioned in the previous section under Hoisting, when the javascript
+parser finds a variable definition or declaration, the variable is initialized 
+to undefined.
+
+3.3
+``` javascript
+console.log(foo)
+var foo = 'bar'
+```
+
+In example 3.3 'undefined' will be printed to the console. This is because when
+the parser find the definition of foo, the parser raises or hoists the 
+declaration of foo to the top of the file and then defines foo as undefined. As
+can be seen in example 3.4 foo has been defined as undefined. The code is 
+executed sequentially. So when foo is printed to the console it has yet to be 
+defined to 'bar' but it still exists and has been defined.
+
+3.4
+``` javascript
+var foo = undefined
+console.log(foo)
+foo = 'bar'
+```
 
 ## Not Defined 
 Error message "Uncaught ReferenceError: a is not defined"
