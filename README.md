@@ -119,4 +119,17 @@ foo = 'bar'
 ```
 
 ## Not Defined 
-Error message "Uncaught ReferenceError: a is not defined"
+When a variable or function that has not been defined is used then an error
+is thrown. In example 3.5 the variable foo has not been defined so the 
+following error will be thrown.
+
+"Uncaught ReferenceError: foo is not defined"
+
+3.5
+``` javascript
+console.log(foo)
+```
+
+It is important to know the difference between 'not defined' and undefined 
+because they can lead to very common errors and knowing exactly what is the 
+cause will result in a swift resolution.
