@@ -133,3 +133,23 @@ console.log(foo)
 It is important to know the difference between 'not defined' and undefined 
 because they can lead to very common errors and knowing exactly what is the 
 cause will result in a swift resolution.
+
+## Primitive Data Types
+Javascript has a total of 7 Javascript primitive data types. The Null primitive
+is sort of special and could be considered to be in a seperate category. The 
+null primitive returns 'object' from the typeof operator. This is due to every
+object being derived from null.
+1. String
+2. Number
+3. Boolean
+4. Symbol
+5. Undefined
+6. BigInt
+7. Null
+
+## Structural Data Types
+There are 3 structural data types in javascript. In order to check what 
+structural data type an object is use the 'instanceof' operator.
+1. Object
+2. Function
+3. Array
