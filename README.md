@@ -153,3 +153,64 @@ structural data type an object is use the 'instanceof' operator.
 1. Object
 2. Function
 3. Array
+
+## Execution Stack
+When some javascript code is run, a global execution context is created. The 
+global execution context is put onto an execution stack. The code is parsed and
+executed line by line. When a function is invoked a new execution context is 
+created and put ontop of the execution stack. The execution context on the very
+top of the stack is the execution context that is currently running or
+executing its code line by line.
+
+4.1
+``` javascript
+function foo(){
+   bar()
+   console.log("foo")
+}
+function bar(){
+   console.log("bar")
+}
+foo()
+```
+4.2.1
+** Execution Stack **
+|                          |
+|                          |
+| global execution context |
+
+4.2.2
+** Execution Stack **
+|                          |
+| foo()                    |
+| global execution context |
+
+4.2.3
+** Execution Stack **
+| bar()                    |
+| foo()                    |
+| global execution context |
+
+4.2.4
+** Execution Stack **
+|                          |
+| foo()                    |
+| global execution context |
+
+4.2.5
+** Execution Stack **
+|                          |
+|                          |
+| global execution context |
+
+As the code in example 4.1 is run the execution stack changes as per 4.2.1,
+4.2.2, 4.2.3, 4.2.4 and 4.2.5. At first the execution stack is empty with only
+the global execution context as per 4.2.1. When the foo function is invoked 
+then an execution context is created for the foo() function as per 4.2.2. The
+foo function then begins to execute and the bar() function is invoked creating
+yet another execution context that is pushed onto the execution stack as 
+reflected in 4.2.3. The bar function then executes printing "bar" to console.
+Once the bar() function finishes the arduous task of printing "bar" to the
+console, the bar() execution context will then be popped off the execution 
+stack as per 4.2.4 and then the foo() function will finish and be popped of as
+per 4.2.5. 
