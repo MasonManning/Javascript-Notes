@@ -174,31 +174,31 @@ function bar(){
 foo()
 ```
 4.2.1
-** Execution Stack **
+**Execution Stack**
 |                          |
 |                          |
 | global execution context |
 
 4.2.2
-** Execution Stack **
+**Execution Stack**
 |                          |
 | foo()                    |
 | global execution context |
 
 4.2.3
-** Execution Stack **
+**Execution Stack**
 | bar()                    |
 | foo()                    |
 | global execution context |
 
 4.2.4
-** Execution Stack **
+**Execution Stack**
 |                          |
 | foo()                    |
 | global execution context |
 
 4.2.5
-** Execution Stack **
+**Execution Stack**
 |                          |
 |                          |
 | global execution context |
