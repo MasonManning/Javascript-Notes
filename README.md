@@ -174,34 +174,34 @@ function bar(){
 foo()
 ```
 4.2.1
-**Execution Stack**
-|                          |
-|                          |
-| global execution context |
+**Execution Stack** 
+|                          | 
+|                          | 
+| global execution context | 
 
 4.2.2
-**Execution Stack**
-|                          |
-| foo()                    |
-| global execution context |
+**Execution Stack** 
+|                          | 
+| foo()                    | 
+| global execution context | 
 
 4.2.3
-**Execution Stack**
-| bar()                    |
-| foo()                    |
-| global execution context |
+**Execution Stack** 
+| bar()                    | 
+| foo()                    | 
+| global execution context | 
 
 4.2.4
-**Execution Stack**
-|                          |
-| foo()                    |
-| global execution context |
-
+**Execution Stack** 
+|                          | 
+| foo()                    | 
+| global execution context | 
+ 
 4.2.5
-**Execution Stack**
-|                          |
-|                          |
-| global execution context |
+**Execution Stack** 
+|                          | 
+|                          | 
+| global execution context | 
 
 As the code in example 4.1 is run the execution stack changes as per 4.2.1,
 4.2.2, 4.2.3, 4.2.4 and 4.2.5. At first the execution stack is empty with only
@@ -214,3 +214,9 @@ Once the bar() function finishes the arduous task of printing "bar" to the
 console, the bar() execution context will then be popped off the execution 
 stack as per 4.2.4 and then the foo() function will finish and be popped of as
 per 4.2.5. 
+
+
+## Variable Environment
+There is a new variable environment inside an execution context
+
+## Scope
