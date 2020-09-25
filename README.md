@@ -217,6 +217,18 @@ per 4.2.5.
 
 
 ## Variable Environment
-There is a new variable environment inside an execution context
+There is a new variable environment inside every execution context. When a
+function is invoked a new execution context is created and put on the execution
+stack. This new execution context has a variable environment that stores all 
+the variables with in the function. This information is important to know when
+understanding closures.
 
 ## Scope
+A scope spans the entire execution context. If a variable is defined within a 
+global execution context the variable can be accessed from anywhere within the
+file because the scope spans the entire execution context.
+
+When a function is executed a new execution context is created. This execution
+context also has its own scope. If a function is defined and invoked within the
+global execution context. Variables within the function will not be accessible 
+in the global execution context.
