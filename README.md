@@ -232,3 +232,18 @@ When a function is executed a new execution context is created. This execution
 context also has its own scope. If a function is defined and invoked within the
 global execution context. Variables within the function will not be accessible 
 in the global execution context.
+In example 4.3.1 the function foo() creates its own execution context. The 
+variable a is stored within the global execution context while the variable b 
+is stored within the execution context of the function foo().
+
+4.3.1
+``` javascript
+var a = "a"
+var foo(){
+   var b = "b"
+}
+```
+
+## Scope Chain
+Every execution context has a reference to the outer environment. If a variable
+cannot be found within the execution context 
