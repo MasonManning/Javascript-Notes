@@ -247,3 +247,16 @@ var foo(){
 ## Scope Chain
 Every execution context has a reference to the outer environment. If a variable
 cannot be found within the execution context 
+
+## Closure
+Functions form closures. A closure is a function along with references to the
+variables in its  outer environment. So a closure gives the function access to 
+variables that are part of an outer function or global variables depending on 
+where the function was defined.
+
+Closures are commonly used by defining a function inside another function and 
+returning the inner function from the outer function. When the outer function
+is invoked an execution context is created and put on the execution stack.
+Normally after a function has finished running it will be popped of the 
+execution stack but with closures the variables are still kept in memory and 
+the inner function still has access to them. 
