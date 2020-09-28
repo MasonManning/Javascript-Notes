@@ -246,7 +246,60 @@ var foo(){
 
 ## Scope Chain
 Every execution context has a reference to the outer environment. If a variable
-cannot be found within the execution context 
+cannot be found within the execution context then the execution context that 
+the outer environment reference is pointing to is checked. 
+
+4.4.1
+``` javascript
+var a = 'a'
+function foo(){
+   var b = 'b'
+   console.log(a)
+}
+```
+Example 4.4.1 illustrates how the scope chain gives function foo() access to 
+the variable 'a'. As the variable 'a' is not within the scope of foo() the 
+reference to the outer environment is used to check for the variable 'a' in the
+outer environment. The outer environment in this case is the global execution
+context.
+
+4.4.2
+``` javascript
+var a = 'a'
+function foo(){
+   var b = 'b'
+   function bar(){
+      console.log(b)
+      console.log(a)
+   }
+}
+```
+In example 4.4.2 the outer reference for function bar() is pointing to the 
+execution context for the foo() funciton. This means that the variables within
+the foo() function can also be accessed within the bar() function. The outer 
+reference of the foo function is pointing to the global execution context which
+stores the variable 'a'. These outer references can form a chain. This is known
+as the scope chain because it brings all of the variables into scope from the 
+outer reference. This is why function bar() has access to the variables 'a' and
+'b' which are in the execution context for function foo() and the global
+execution context respectively.
+
+4.4.3
+``` javascript
+var a = 'a'
+function foo(){
+   var b = 'b'
+}
+function bar(){
+   console.log(b)
+}
+```
+In example 4.4.3 the outer environment reference for both function foo() and 
+function bar() is pointing to the global execution context. This means that 
+neither function foo() or the function bar() have access to each others 
+variables. So function bar() will not be able to log the variable 'b' to the 
+console. Consequently an is not defined error will be thrown when trying to 
+execute the bar() function.
 
 ## Closure
 Functions form closures. A closure is a function along with references to the
