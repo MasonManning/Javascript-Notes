@@ -313,3 +313,12 @@ is invoked an execution context is created and put on the execution stack.
 Normally after a function has finished running it will be popped of the 
 execution stack but with closures the variables are still kept in memory and 
 the inner function still has access to them. 
+
+#Object
+Objects are collections of name value pairs. An object can store primitives, 
+other object and function within the name/value pairs. When an object stores a 
+function it is refered to as a method. When an object stores primitives and 
+other objects they are refered to as properties. 
+
+Objects have references to memory locaiton of the properties and functions 
+stored within them.
