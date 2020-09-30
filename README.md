@@ -314,7 +314,7 @@ Normally after a function has finished running it will be popped of the
 execution stack but with closures the variables are still kept in memory and 
 the inner function still has access to them. 
 
-#Object
+##Object
 Objects are collections of name value pairs. An object can store primitives, 
 other object and function within the name/value pairs. When an object stores a 
 function it is refered to as a method. When an object stores primitives and 
@@ -322,3 +322,22 @@ other objects they are refered to as properties.
 
 Objects have references to memory locaiton of the properties and functions 
 stored within them.
+
+
+## Spread Operator
+It is possible to use the spread operator to increase the number of elements in
+an array. It can be used to a new element to either the start or end of the 
+array.
+
+The following adds the number 4 to the end of the array.
+``` javascript
+var arr = [1,2,3]
+arr = [...arr, 4]
+```
+It is also possible to add the element to the start of the array as seen below:
+``` javascript
+var arr = [1,2,3]
+arr = [4,...arr]
+```
+
+
