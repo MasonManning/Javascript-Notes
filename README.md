@@ -323,6 +323,34 @@ other objects they are refered to as properties.
 Objects have references to memory locaiton of the properties and functions 
 stored within them.
 
+## Object Literal
+It is very common to see objects created in javascript with the object literal
+notation. The object literal notaion is simply a key/value pair enclosed within
+curly brackets '{}'. Unlike JSON, object literal notation does not have the key
+surrounded with quotes.
+
+The following is an example of an object literal notation. An object is a 
+collection of key value pairs separated by a comma. Name being the key and Mary
+being the value.
+``` javascript
+{
+   name: "Mary",
+   age: 20,
+   comment: "hello"
+}
+```
+It is possible to store objects in variables and retrieve their values using
+the dot operator. The following example prints the persons name to the console.
+``` javascript
+var person = {
+   name: "Mary",
+   age: 20,
+   comment: "hello"
+}
+console.log(person.name)
+```
+
+
 
 ## Spread Operator
 It is possible to use the spread operator to increase the number of elements in
