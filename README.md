@@ -350,6 +350,11 @@ var person = {
 console.log(person.name)
 ```
 
+# 1st Class Functions
+Functions are objects. First class functions means that everything that can be 
+done with other types in javascript can be done with functions. It is possible
+to store functions in variables, to pass functions around as parameters to 
+other functions or even create functions on the fly.
 
 
 ## Spread Operator
