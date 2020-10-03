@@ -372,5 +372,11 @@ It is also possible to add the element to the start of the array as seen below:
 var arr = [1,2,3]
 arr = [4,...arr]
 ```
+Functions are objects and because functions are objects it is possible to 
+attach primitive name/value pairs, objects and other functions. The function 
+object has a couple hidden properties. They are the name and code property. The
+name property is optional as it can anonymous. The code property stores the 
+lines of code that make up the function. The code property can be invoked. Once
+invoked an execution context will be created and put on the execution stack.
 
 
