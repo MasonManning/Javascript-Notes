@@ -379,4 +379,10 @@ name property is optional as it can anonymous. The code property stores the
 lines of code that make up the function. The code property can be invoked. Once
 invoked an execution context will be created and put on the execution stack.
 
-
+## Arrays
+Arrays in javascript can be created with the square brackets like many other 
+programming languages. In javascript however, it is possible to store multiple
+data types in the array as seen in the example below.
+``` javascript
+var arr = [1,2,"three",{text:"four"}]
+```
