@@ -386,3 +386,18 @@ data types in the array as seen in the example below.
 ``` javascript
 var arr = [1,2,"three",{text:"four"}]
 ```
+
+## Callbacks
+A callback is a function that calls the function that is passed into it. This 
+make use of the fact that javascript has first class functions. The following 
+example illustrates the use of setTimeout as a callback function. The 
+setTimeout function takes another function as a argument, this function will be
+called at by the setTimeout function later. So we call the setTimeout function
+and the setTimeout function 'calls us back'
+
+``` javascript
+setTimeout(function(){
+   console.log("Hello World!")
+},3000)
+```
+
